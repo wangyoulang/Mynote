@@ -2,6 +2,12 @@
 
 ## 1.在github上创建仓库并上传
 
+提高git速度的命令：
+
+```java
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
 ### 1.1仓库的操作
 
 ```java
