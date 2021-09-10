@@ -45,7 +45,7 @@ git config --global --replace-all user.email "你的邮箱"
 
 ```java
 git init 
-git echo "readme内容" >>README.me
+gitecho "readme内容" >>README.md
 git add .
 git commit -m "first commit"
 git branch -M master
