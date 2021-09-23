@@ -41,7 +41,7 @@ $ ./kibana
 
 ## 3.下载ik分词器
 
-下载elasticsearch-analysis-ik-7.14.0，解压后复制到/elasticsearch/plugin文件夹中。否则Springboot启动会出错。
+下载elasticsearch-analysis-ik-7.14.0，解压后复制到/elasticsearch/plugins文件夹中。否则Springboot启动会出错。
 
 ## 4.相关注解
 

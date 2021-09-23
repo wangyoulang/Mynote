@@ -110,6 +110,26 @@ tab up::
 Return
 
 ; 输入法/大小写切换
+CapsLock::
+	if AltState = 2
+	{
+		SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"
+	}
+	else
+	{
+		KeyWait, CapsLock, T0.3
+		If ErrorLevel
+		{
+	   		SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"
+    			KeyWait, CapsLock
+		}
+		else
+		{
+			SetCapsLockState, % "Off"
+			SendInput {LCtrl down}{Space}{LCtrl up}
+		}
+	}
+Return
 
 ; ==========Spc key========
 
