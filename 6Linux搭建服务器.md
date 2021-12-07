@@ -44,7 +44,7 @@
 >
 >   3.创建配置文件my.cnf
 >
->   cd /home/zhengyunfei/docker/mysql/data/mysel
+>   cd /home/zhengyunfei/docker/mysql/data/mysql
 >
 >   在这个目录下：vi my.cnf
 >
@@ -74,6 +74,12 @@
 >   5.设置mysql开机自启
 >
 >   `docker exec -it mysql /bin/bash `
+>   
+>   6.将3306端口加入到防火墙中。
+>   
+>   ![image-20211207154433847](6Linux搭建服务器.assets/image-20211207154433847.png)
+>   
+>   ![image-20211207154457715](6Linux搭建服务器.assets/image-20211207154457715.png)
 
 > - 安装redis
 >
@@ -124,3 +130,4 @@
 > 简单来说，把一台服务器当作主服务器，其他服务器（一台或多台）当作从服务器，主从复制就是从服务器从主服务器拉取二进制日志文件，然后在从服务器上执行一遍，保证和主服务器上数据一致。
 >
 > ​	但是，当主服务器出现问题的时候就需要手动处理故障转移了，通常是把从服务器改为主服务器，在主从复制一遍。
+
