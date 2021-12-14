@@ -30,6 +30,8 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 ```java
 git config --global user.name "你的名字或昵称"
 git config --global user.email "你的邮箱"
+查看：
+git config user.name
 ```
 
 修改用户名和邮箱
