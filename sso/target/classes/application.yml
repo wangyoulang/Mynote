@@ -1,0 +1,9 @@
+server:
+  port: 8080
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+spring:
+  datasource:
+    username: root
+    password: 12345678  #改下密码
+    url: jdbc:mysql://47.96.126.229/mall?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC #localhost改成服务器ip
