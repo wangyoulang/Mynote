@@ -11,25 +11,25 @@
         from oms_order
         <where>
             <if test="param.orderSn != null and param.orderSn != ''">
-                order_sn = #{param.orderSn}
+                and order_sn = #{param.orderSn}
             </if>
             <if test="param.status != null and param.status != ''">
-                status = #{param.status}
+                and status = #{param.status}
             </if>
             <if test="param.receiverName != null and param.receiverName != ''">
-                receiver_name = #{param.receiverName}
+                and receiver_name = #{param.receiverName}
             </if>
             <if test="param.orderType != null and param.orderType != ''">
-                order_type = #{param.orderType}
+                and order_type = #{param.orderType}
             </if>
             <if test="param.startTime != null and param.startTime != ''">
-                create_time > #{param.startTime}
+                and create_time > #{param.startTime}
             </if>
             <if test="param.endTime != null and param.endTime != ''">
-                create_time &lt; #{param.endTime}
+                and create_time &lt; #{param.endTime}
             </if>
             <if test="param.sourceType != null and param.sourceType != ''">
-                source_type = #{param.sourceType}
+                and source_type = #{param.sourceType}
             </if>
 
         </where>
