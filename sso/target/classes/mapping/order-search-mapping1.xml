@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sso.core.mapper.OrderSearchDAO1">
+
+    <sql id="Base_Column_List">
+        o1.order_sn,o1.product_attr,o1.product_price,01.product_quantity,
+        o2.order_sn,o2.delivery_company,o2.delivery_sn,o2.auto_confirm_day，o2.integration，o2.growth，o2.promotion_info
+    </sql>
+
+
+    <select id="searchOrderByExample" resultType="com.example.sso.core.DTO.OrderSearchDTO1">
+        select
+        <include refid="Base_Column_List"/>
+        from oms_order-item o1
+        left join oms_order o2 on o1.order_sn=o2.order_sn
+        <where>
+           <if test="param.orderSn !=null and param.orderSn!=''">
+            and order_sn=#{param.orderSn}
+           </if>
+        </where>
+
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+

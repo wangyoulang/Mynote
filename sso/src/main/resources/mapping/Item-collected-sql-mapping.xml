@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.sso.core.mapper.CollectItemDAO">
+
+    <sql id="BASE_WHERE">
+        <if test="example.startDate != null and example.startDate != ''">
+            and collect_date &gt;= #{example.startDate}
+        </if>
+        <if test="example.endDate != null and example.endDate != ''">
+            and collect_date &lt;= #{example.endDate}
+        </if>
+        <if test="example.teamIdList != null and example.teamIdList.size() > 0">
+            and team_id in
+            <foreach collection="example.teamIdList" item="teamId" open="(" close=")" separator=",">
+                #{teamId}
+            </foreach>
+        </if>
+    </sql>
+
+    <sql id="COLLECT_ITEM_WHERE">
+        <if test="example.rootCategoryId != null">
+            and b.root_category_id = #{example.rootCategoryId}
+        </if>
+        <if test="example.categoryId != null">
+            and b.category_id = #{example.categoryId}
+        </if>
+        <if test="example.shopType != null">
+            and b.shop_type = #{example.shopType}
+        </if>
+        <if test="example.shopMonitorStatus != null">
+            and b.shop_monitor_status = #{example.shopMonitorStatus}
+        </if>
+    </sql>
+
+    <sql id="TREND_GRANULARITY">
+        <choose>
+            <when test="example.granularity == 1">
+                a.collect_date range_date
+            </when>
+            <when test="example.granularity == 2">
+                DATE_FORMAT(a.collect_date, '%x-%v') range_date
+            </when>
+            <when test="example.granularity == 3">
+                DATE_FORMAT(a.collect_date, '%Y-%m') range_date
+            </when>
+        </choose>
+    </sql>
+
+
+
+    <select id="joinTrend" resultType="com.example.sso.core.collection.TrendDO">
+        select
+        count(*) number, <include refid="TREND_GRANULARITY"/>
+        from (
+        select
+        item_id, collect_date
+        from
+        tb_collect_info
+        <where>
+            <include refid="BASE_WHERE"/>
+        </where>
+        ) a
+        inner join
+        tb_collect_item b
+        on
+        b.item_id = a.item_id
+        <where>
+            <include refid="COLLECT_ITEM_WHERE"/>
+        </where>
+        group by
+        range_date
+        order by
+        range_date
+    </select>
+
+    <select id="count" resultType="com.example.sso.core.collection.CollectCountDO">
+        select
+        count(id) collect_num, count(distinct item_id) item_num
+        from
+        tb_collect_info
+        <where>
+            <include refid="BASE_WHERE"/>
+        </where>
+    </select>
+    <select id="unionCount" resultType="com.example.sso.core.collection.CollectCountDO">
+        select
+        count(id) collect_num, count(distinct item_id) item_num, 1
+        from
+        tb_collect_info
+        <where>
+            <include refid="BASE_WHERE"/>
+        </where>
+        union
+        select
+        count(id) count_num, count(distinct item_id) item_num, 2
+        from
+        tb_collect_info
+        <where>
+            <if test="example.lastStartDate != null and example.lastStartDate != ''">
+                and collect_date &gt;= #{example.lastStartDate}
+            </if>
+            <if test="example.lastStartDate != null and example.lastEndDate != ''">
+                and collect_date &lt;= #{example.lastEndDate}
+            </if>
+            <if test="example.teamIdList != null and example.teamIdList.size() > 0">
+                and team_id in
+                <foreach collection="example.teamIdList" item="teamId" open="(" close=")" separator=",">
+                    #{teamId}
+                </foreach>
+            </if>
+        </where>
+        union
+        select
+        count(id) count_num, count(distinct item_id) item_num, 3
+        from
+        tb_collect_info
+        <where>
+            <if test="example.lastYearStartDate != null and example.lastYearStartDate != ''">
+                and collect_date &gt;= #{example.lastYearStartDate}
+            </if>
+            <if test="example.lastYearEndDate != null and example.lastYearEndDate != ''">
+                and collect_date &lt;= #{example.lastYearEndDate}
+            </if>
+            <if test="example.teamIdList != null and example.teamIdList.size() > 0">
+                and team_id in
+                <foreach collection="example.teamIdList" item="teamId" open="(" close=")" separator=",">
+                    #{teamId}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+    <select id="trend" resultType="com.example.sso.core.collection.TrendDO">
+        select
+        count(*) number, <include refid="TREND_GRANULARITY"/>
+        from
+        tb_collect_info a
+        <where>
+            <include refid="BASE_WHERE"/>
+        </where>
+        group by
+        range_date
+        order by
+        range_date
+    </select>
+
+</mapper>

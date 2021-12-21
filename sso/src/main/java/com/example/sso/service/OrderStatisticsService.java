@@ -1,5 +1,8 @@
 package com.example.sso.service;
 
 public interface OrderStatisticsService {
-    Integer getOrderTatol();
+    //这个接口是用来调用方法
+
+
+    Integer getOrderTotal();
 }

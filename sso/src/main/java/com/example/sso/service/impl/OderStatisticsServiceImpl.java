@@ -12,8 +12,9 @@ public class OderStatisticsServiceImpl implements OrderStatisticsService {
     @Resource
     OrderStatisticsDAO orderStatisticsDAO;
 
+    ///连接接口，重写方法
     @Override
-    public Integer getOrderTatol() {
+    public Integer getOrderTotal() {
         Integer orderAmount;
         orderAmount = orderStatisticsDAO.getOrderTotal();
         return orderAmount;

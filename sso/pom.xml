@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId> <!--帮我们导入了web模块正常运行所依赖包 -->
         </dependency>
 
         <dependency>
@@ -35,12 +35,12 @@
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <artifactId>lombok</artifactId><!--里边有注解@Data，获取属性的get、set函数-->
             <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId><!--帮我们导入了单元测试模块正常运行所依赖包 -->
             <scope>test</scope>
         </dependency>
         <dependency>
