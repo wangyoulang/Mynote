@@ -1,6 +1,6 @@
 # 订单小业务
 
-[业务需求](ttps://shimo.im/docs/yVHCRhdTwWygxHrc)
+[业务需求](https://shimo.im/docs/yVHCRhdTwWygxHrc)
 
 1.新建一个搜索条件类OrderSearchExample：
 
