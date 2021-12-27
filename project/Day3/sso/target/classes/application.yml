@@ -2,6 +2,8 @@ server:
   port: 8080
 mybatis:
   mapper-locations: classpath:mapping/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 spring:
   datasource:
     username: root
