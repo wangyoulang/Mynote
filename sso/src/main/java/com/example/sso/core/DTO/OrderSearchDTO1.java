@@ -4,14 +4,17 @@ import lombok.Data;
 
 @Data
 public class OrderSearchDTO1 {
+    ////响应用驼峰命名法
+    //订单编号
+    private String orderSn;
     //物流
-    private String delivery_company;
+    private String deliveryCompany;
 
     //物流单号
-    private String delivery_sn;
+    private String deliverySn;
 
     //自动确定天数
-    private Integer auto_confirm_day;
+    private Integer autoConfirmDay;
 
     //可以获得的积分
     private Integer integration;
@@ -20,16 +23,16 @@ public class OrderSearchDTO1 {
     private Integer growth;
 
     //活动信息
-    private String promotion_info;
+    private String promotionInfo;
 
     //商品销售属性
-    private String product_attr;
+    private String productAttr;
 
     //销售价格
-    private Double product_price;
+    private Double productPrice;
 
     //购买数量
-    private Integer product_quantity;
+    private Integer productQuantity;
 
 
 

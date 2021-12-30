@@ -4,7 +4,7 @@
 
     <sql id="Base_Column_List">
         o1.order_sn,o1.product_attr,o1.product_price,o1.product_quantity,
-        o2.order_sn,o2.delivery_company,o2.delivery_sn,o2.auto_confirm_day,o2.integration,o2.growth,o2.promotion_info
+        o2.delivery_company,o2.delivery_sn,o2.auto_confirm_day,o2.integration,o2.growth,o2.promotion_info
     </sql>
 
 
