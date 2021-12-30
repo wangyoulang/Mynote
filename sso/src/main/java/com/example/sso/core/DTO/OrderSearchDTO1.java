@@ -2,6 +2,8 @@ package com.example.sso.core.DTO;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class OrderSearchDTO1 {
     //物流
@@ -26,7 +28,7 @@ public class OrderSearchDTO1 {
     private String product_attr;
 
     //销售价格
-    private Double product_price;
+    private BigDecimal product_price;
 
     //购买数量
     private Integer product_quantity;
