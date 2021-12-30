@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a0c9c0e-49da-49e1-a91e-f42804b572e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AUTOHOTKEY/windows-key-like-mac" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AUTOHOTKEY/windows-key-like-mac" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Day3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Day3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../sso/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../sso/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../sso/src/main/resources/mapping/order-search-mapping1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../sso/src/main/resources/mapping/order-search-mapping1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../sso/target/classes/mapping/order-search-mapping1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../sso/target/classes/mapping/order-search-mapping1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../sso/src/main/java/com/example/sso/core/DTO/OrderSearchDTO1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../sso/src/main/java/com/example/sso/core/DTO/OrderSearchDTO1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -128,7 +121,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/sso/SsoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
@@ -141,7 +134,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -468,13 +461,13 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1640245152172" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1640782261146" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/分类/sso(1)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -571,7 +564,7 @@
       <workItem from="1640058481793" duration="131000" />
       <workItem from="1640058645442" duration="83000" />
       <workItem from="1640058762572" duration="337000" />
-      <workItem from="1640059133046" duration="5078000" />
+      <workItem from="1640059133046" duration="5675000" />
     </task>
     <servers />
   </component>
@@ -581,7 +574,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54786000" />
+    <option name="totallyTimeSpent" value="55383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -596,7 +589,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2784" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -759,17 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/sso/SsoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a090ecb4-8fb1-41da-b901-a03390c6606d/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -831,6 +813,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/sso/SsoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
