@@ -2,8 +2,6 @@ package com.example.sso.core.DTO;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
-
 @Data
 public class OrderSearchDTO1 {
     ////响应用驼峰命名法
@@ -31,11 +29,7 @@ public class OrderSearchDTO1 {
     private String productAttr;
 
     //销售价格
-<<<<<<< HEAD
     private Double productPrice;
-=======
-    private BigDecimal product_price;
->>>>>>> 12e09d6a61c513b47605d9ebe5cc33ca60bf2c95
 
     //购买数量
     private Integer productQuantity;
